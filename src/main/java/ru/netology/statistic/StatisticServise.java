@@ -3,19 +3,20 @@ package ru.netology.statistic;
 public class StatisticServise {
     public int calcAllSalesSum(int[] monthlySales) {
 
-        int AllSalesSum = 0;
+        int allSalesSum = 0;
         for (int monthlySale : monthlySales) {
-            AllSalesSum += monthlySale;
+            allSalesSum += monthlySale;
         }
-        return AllSalesSum;
+        return allSalesSum;
     }
 
     public int calcAverageSum(int[] monthlySales) {
-        int AllSalesSum = 0;
+        double average = calcAllSalesSum(monthlySales);
+        int AverageSum = 0;
         for (int monthlySale : monthlySales) {
-            AllSalesSum += monthlySale;
+            AverageSum += monthlySale;
         }
-        return AllSalesSum / monthlySales.length;
+        return AverageSum / monthlySales.length;
     }
 
     public int calcMaxMonthSales(int[] monthlySales) {
