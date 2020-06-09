@@ -20,7 +20,7 @@ class StatsServiceTest {
     void calcAverageSum() {
         StatisticServise service = new StatisticServise();
         int expected = 15;
-        int actual = service.calcAverageSum(monthlySales);
+        double actual = service.calcAverageSum(monthlySales);
         assertEquals(expected, actual);
     }
 

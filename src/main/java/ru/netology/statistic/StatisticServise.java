@@ -10,15 +10,13 @@ public class StatisticServise {
         return allSalesSum;
     }
 
-    public int calcAverageSum(int[] monthlySales) {
+    public double calcAverageSum(int[] monthlySales) {
 
-        int allSalesSum = 0;
         int averageSalesMonth = 0;
         for (int monthlySale : monthlySales) {
-            allSalesSum += monthlySale;
-            averageSalesMonth = allSalesSum / monthlySales.length;
+            ++averageSalesMonth ;
         }
-        return averageSalesMonth;
+        return (double) calcAllSalesSum(monthlySales) / averageSalesMonth;
     }
 
     public int calcMaxMonthSales(int[] monthlySales) {
